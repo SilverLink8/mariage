@@ -128,10 +128,15 @@ header h1 {
   justify-content: center;
   gap: 85px;
 }
-
+    @media (max-width: 700px) {
+  .fete-contenu {
+    flex-direction: column;
+  }
+}
 .fete-texte {
   flex: 1;
-  max-width: 400px
+  max-width: 450px;
+  text-align: left;
 }
 
 .fete-image {
@@ -141,6 +146,11 @@ header h1 {
 .fete-image img {
   width: 100%;
   max-width: 400px;
+}
+/* ------------------------------------------------------------------ hebergement ------------------------------------------------------------------ */ 
+    .hebergement {
+  max-width: 700px;
+  margin: 0 auto;
 }
 /* ------------------------------------------------------------------ FONTS ------------------------------------------------------------------ */ 
     .bouton {
@@ -252,18 +262,24 @@ header h1 {
     <img src='./rosenmeer.png' class="photo-flottante">
   </div>
 <!----------------------------------------------------------------- LOGER ------------------------------------------->
-</div>
-</section>
 <section class="section-cream">
-  <h2>Dormir sur place</h2>
-  <p>Il vous est possible de réserver afin de dormir sur place (petit-déjeuner buffet inclus) :</p>
-<p>moins de 7 réservations : 130 € la chambre pour 2 personnes ;</p>
-<p>à partir de 7 réservations : 115 € la chambre pour 2 personnes ;</p>
-<p>à partir de 15 réservations : 99 € la chambre pour 2 personnes.</p>
-<p>Lit supplémentaire : 10 € par enfant (à partir de 7 ans).notre mariage avec nous.</p>
-
-  <a href="https://le-rosenmeer.fr/" target="_blank" class="bouton">Voir le site du Rosenmeer</a>
   
+  <div class="hebergement">
+    <h2>Dormir sur place</h2>
+
+    <p>Il vous est possible de réserver afin de dormir sur place (petit-déjeuner buffet inclus) :</p>
+
+    <p>moins de 7 réservations : 130 € la chambre pour 2 personnes ;</p>
+    <p>à partir de 7 réservations : 115 € la chambre pour 2 personnes ;</p>
+    <p>à partir de 15 réservations : 99 € la chambre pour 2 personnes.</p>
+    <p>Lit supplémentaire : 10 € par enfant (à partir de 7 ans).</p>
+
+    <a href="https://le-rosenmeer.fr/" target="_blank" class="bouton">
+      Voir le site du Rosenmeer
+    </a>
+
+  </div>
+
 </section>
 <!----------------------------------------------------------------- Section FAQ ------------------------------------------->
 <section class="section-img-1">
