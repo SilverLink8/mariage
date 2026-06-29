@@ -116,6 +116,26 @@ header h1 {
   width: 300px;
   animation: flotter 4s ease-in-out infinite;
 }
+    .fete-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.fete-texte {
+  flex: 1;
+}
+
+.fete-image {
+  flex: 1;
+}
+
+.fete-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+}
 
 @keyframes flotter {
   0% {
@@ -191,13 +211,26 @@ header h1 {
   <p class="adress">Église protestante de Mundolsheim </p>
 <p class="adress">Grand’rue de l’Église, 67450 Mundolsheim</p>
 </p>
-  <h3>Cap sur la fête</h3>
-<p>Après la cérémonie, retrouvons-nous pour poursuivre cette belle journée autour d'un vin d’honneur, d'un dîner et d'une soirée festive.</p>
-  <p class="adress">Le Rosenmeer</p>
-  <img src="./images/rosenmeer.png" class="photo-flottante">
-<p class="adress">45 avenue de la Gare, 67076 Rosheim</p>
-</section>
+ 
+<div class="fete-contenu">
 
+  <div class="fete-texte">
+    <h3>Cap sur la fête</h3>
+
+    <p>
+      Après la cérémonie, retrouvons-nous pour poursuivre cette belle journée autour d'un vin d’honneur, d'un dîner et d'une soirée festive.
+    </p>
+
+    <p class="adress">Le Rosenmeer</p>
+    <p class="adress">45 avenue de la Gare, 67076 Rosheim</p>
+  </div>
+
+  <div class="fete-image">
+    <img src="./images/rosenmeer.png" class="photo-flottante">
+  </div>
+
+</div>
+</section>
 <section class="section-cream">
   <h2>Dormir sur place</h2>
   <p>Il vous est possible de réserver afin de dormir sur place (petit-déjeuner buffet inclus) :</p>
