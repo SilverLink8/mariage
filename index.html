@@ -48,17 +48,30 @@
       padding: 0;
       font-size: 1em;
     }
-    header {
+  header {
   height: 70vh;
   background-image: url("fond_alsace.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-      display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  animation: zoom 3s ease forwards;
 }
+
+@keyframes zoom {
+  from {
+    background-size: 100%;
+  }
+
+  to {
+    background-size: 110%;
+  }
+}
+    
     section {
        padding: 25px;
   
