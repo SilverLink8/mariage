@@ -49,27 +49,40 @@
       font-size: 1em;
        letter-spacing: 5px;
     }
-  header {
+ header {
   height: 70vh;
-  background-image: url("fond_alsace.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
 
-  animation: zoom 3s ease forwards;
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("fond_alsace.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoom 10s ease forwards;
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes zoom {
   from {
-    background-size: 100%;
+    transform: scale(1);
   }
 
   to {
-    background-size: 110%;
+    transform: scale(1.1);
   }
 }
     
