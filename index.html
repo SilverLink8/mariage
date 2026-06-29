@@ -125,14 +125,70 @@ Grand’rue de l’Église, 67450 Mundolsheim
 
 <section class="section-img-1">
   <h2>Titre</h2>
-  <p>Il vous est possible de réserver afin de dormir sur place (petit-déjeuner buffet inclus) :</p>
-</p>moins de 7 réservations : 130 € la chambre pour 2 personnes ;</p>
-</p>à partir de 7 réservations : 115 € la chambre pour 2 personnes ;</p>
-</p>à partir de 15 réservations : 99 € la chambre pour 2 personnes.</p>
-</p>Lit supplémentaire : 10 € par enfant (à partir de 7 ans).notre mariage avec nous.</p>
-</p>
-</section>
+  <p>A propos du dress code ou autre</p>
+</p>blabla</p>
 
+</section>
+<section id="rsvp">
+  <h2>RSVP</h2>
+  <p>Merci de confirmer votre présence avant le 1er septembre.</p>
+
+  <form action="https://formspree.io/f/TON_ID" method="POST">
+
+    <label for="name">Nom et prénom</label>
+    <input
+      type="text"
+      id="name"
+      name="Nom"
+      required
+    >
+
+    <label for="email">Adresse e-mail</label>
+    <input
+      type="email"
+      id="email"
+      name="Email"
+      required
+    >
+
+    <label for="attendance">Serez-vous présent ?</label>
+    <select id="attendance" name="Présence" required>
+      <option value="">Choisir...</option>
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+
+    <label for="adults">Nombre d'adultes</label>
+    <input
+      type="number"
+      id="adults"
+      name="Adultes"
+      min="0"
+      value="1"
+      required
+    >
+
+    <label for="children">Nombre d'enfants</label>
+    <input
+      type="number"
+      id="children"
+      name="Enfants"
+      min="0"
+      value="0"
+    >
+
+    <label for="diet">Allergies ou régimes alimentaires</label>
+    <textarea
+      id="diet"
+      name="Allergies/Régimes"
+      rows="4"
+      placeholder="Ex. végétarien, sans gluten, allergie aux arachides..."
+    ></textarea>
+
+    <button type="submit">Envoyer ma réponse</button>
+
+  </form>
+</section>
   
 </body>
 </html>
