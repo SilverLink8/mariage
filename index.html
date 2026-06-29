@@ -140,6 +140,22 @@ header h1 {
   max-width: 400px;
 }
 
+    .bouton {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid #35a8b8;
+  color: #35a8b8;
+  background: transparent;
+  text-decoration: none;
+  border-radius: 50px;
+  letter-spacing: 2px;
+}
+
+.bouton:hover {
+  background: #35a8b8;
+  color: white;
+}
+
 @keyframes flotter {
   0% {
     transform: translateY(0);
@@ -242,7 +258,7 @@ header h1 {
 <p>à partir de 15 réservations : 99 € la chambre pour 2 personnes.</p>
 <p>Lit supplémentaire : 10 € par enfant (à partir de 7 ans).notre mariage avec nous.</p>
 
-  <a href="https://le-rosenmeer.fr/">Voir le site</a>
+  <a href="https://le-rosenmeer.fr/" target="_blank" class="bouton">Voir le site du Rosenmeer</a>
   
 </section>
 <!----------------------------------------------------------------- Section FAQ ------------------------------------------->
@@ -337,7 +353,7 @@ header h1 {
       placeholder="Ex. végétarien, sans gluten, allergie aux arachides..."
     ></textarea>
 
-    <button type="submit">Envoyer ma réponse</button>
+    <button type="submit" class="bouton">Envoyer ma réponse</button>
 
   </form>
 </section>
