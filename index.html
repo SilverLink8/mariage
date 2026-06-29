@@ -32,6 +32,8 @@
             letter-spacing: 10px;
       font-size: 4em;
       text-align: center;
+            margin-top: 10px;
+  margin-bottom: 15px;
     }
       h3 {
       font-family: 'Gastela', serif;
@@ -39,17 +41,19 @@
       font-size: 4em;
         color: #35a8b8;
       text-align: center;
+         margin-top: 20px;
+  margin-bottom: 10px;
     }
     /* ------------------------------------------------------------------ body ------------------------------------------------------------------ */ 
     body {
       background: #dbd2c1;
+      font-size: 1.2em; /* légèrement plus grand */
       margin: 0;
       padding: 0;
        font-family: 'Playfair Display', serif;
       text-align: center;
       color: #4b4438;
   line-height: 1.8;
-      font-size: 1em;
        letter-spacing: 1px;
     }
 /* ------------------------------------------------------------------ HEADER ------------------------------------------------------------------ */    
@@ -102,7 +106,7 @@ header h1 {
        .section-bleufonce {
   background: #01262b;
          color : white;
-  padding: 40px 40px;
+  padding: 20px 40px 40px;
 }
         .section-img-1 {
    background-image: url("./paon_fond.png");
@@ -111,6 +115,7 @@ header h1 {
 }
      .adress {
   font-family: 'Helvetica', sans serif;
+        font-size: 1.3em;
         letter-spacing: 2px;
 }
     .box {
@@ -122,21 +127,30 @@ header h1 {
   width: 300px;
   animation: flotter 4s ease-in-out infinite;
 }
-    .fete-contenu {
+  .fete-contenu {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 85px;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fete-texte {
+  flex: 1;
+  max-width: 450px;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.fete-image {
+  flex: 1;
+  text-align: center;
 }
     @media (max-width: 700px) {
   .fete-contenu {
     flex-direction: column;
   }
-}
-.fete-texte {
-  flex: 1;
-  max-width: 450px;
-  text-align: left;
 }
 
 .fete-image {
@@ -260,7 +274,7 @@ header h1 {
 
   <div class="fete-image">
     <img src='./rosenmeer.png' class="photo-flottante">
-  </div>
+  </div></div>
   </section>
 <!----------------------------------------------------------------- LOGER ------------------------------------------->
 <section class="section-cream">
