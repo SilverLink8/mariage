@@ -262,7 +262,128 @@ header h1 {
   </style>
 
 </head>
+<script>
 
+const presence = document.getElementById("presence");
+const presenceOui = document.getElementById("presenceOui");
+
+const adultes = document.getElementById("adultes");
+const enfants = document.getElementById("enfants");
+
+const adultesContainer = document.getElementById("adultesContainer");
+const enfantsContainer = document.getElementById("enfantsContainer");
+
+const bouton = document.querySelector("#rsvpForm button");
+
+
+/* ----------------------------------------------------   AFFICHAGE SELON PRESENCE---------------------------------------------------- */
+
+presence.addEventListener("change", function() {
+
+  if (this.value === "Oui") {
+
+    presenceOui.style.display = "block";
+
+    bouton.textContent = "Confirmer notre présence 💍";
+
+  } 
+  
+  else if (this.value === "Non") {
+
+    presenceOui.style.display = "none";
+
+    adultesContainer.innerHTML = "";
+    enfantsContainer.innerHTML = "";
+
+    bouton.textContent = "Envoyer notre réponse";
+
+  } 
+  
+  else {
+
+    presenceOui.style.display = "none";
+
+  }
+
+});
+
+
+/* ----------------------------------------------------   CREATION DES ADULTES---------------------------------------------------- */
+
+adultes.addEventListener("input", function() {
+
+  creerPersonnes(
+    adultesContainer,
+    Number(this.value),
+    "Adulte"
+  );
+
+});
+
+
+/* ----------------------------------------------------   CREATION DES ENFANTS---------------------------------------------------- */
+
+enfants.addEventListener("input", function() {
+
+  creerPersonnes(
+    enfantsContainer,
+    Number(this.value),
+    "Enfant"
+  );
+
+});
+
+
+
+function creerPersonnes(container, nombre, type) {
+
+
+  container.innerHTML = "";
+
+
+  for (let i = 1; i <= nombre; i++) {
+
+
+    let bloc = document.createElement("div");
+
+    bloc.className = "rsvp-personne";
+
+
+    bloc.innerHTML = `
+
+      <h4>${type} ${i}</h4>
+
+      <label>
+        Nom et prénom
+      </label>
+
+      <input
+        type="text"
+        name="${type}_${i}_Nom"
+        required
+      >
+
+
+      <label>
+        Allergie ou régime alimentaire
+      </label>
+
+      <input
+        type="text"
+        name="${type}_${i}_Allergie"
+      >
+
+    `;
+
+
+    container.appendChild(bloc);
+
+  }
+
+}
+
+
+</script>
 <body>
 <!----------------------------------------------------------------- HEADER ------------------------------------------->
 <header>
