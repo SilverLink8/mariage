@@ -451,15 +451,15 @@ header h1 {
     </button>
 
   </form>
+<div id="merci" style="display:none; margin-top:40px;">
+
+  <h3 id="merciTitre"></h3>
+
+  <p id="merciTexte"></p>
+
+</div>
 
 
-  <div id="merci" class="cache">
-
-    <h3>Merci beaucoup</h3>
-
-    <p id="messageMerci"></p>
-
-  </div>
 
 
 </section>
@@ -479,12 +479,18 @@ document.addEventListener("DOMContentLoaded", function() {
   const bouton = document.querySelector("#rsvpForm button");
   const formulaire = document.getElementById("rsvpForm");
 
+  const merci = document.getElementById("merci");
+  const merciTitre = document.getElementById("merciTitre");
+  const merciTexte = document.getElementById("merciTexte");
+
+
 
   // Affichage selon présence
 
   presence.addEventListener("change", function() {
 
     console.log("Présence choisie :", this.value);
+
 
     if (this.value === "Oui") {
 
@@ -493,6 +499,7 @@ document.addEventListener("DOMContentLoaded", function() {
       bouton.textContent = "Confirmer notre présence 💍";
 
     } 
+    
     
     else if (this.value === "Non") {
 
@@ -504,6 +511,7 @@ document.addEventListener("DOMContentLoaded", function() {
       bouton.textContent = "Envoyer notre réponse";
 
     } 
+    
     
     else {
 
@@ -547,7 +555,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     container.innerHTML = "";
 
+
     for (let i = 1; i <= nombre; i++) {
+
 
       let bloc = document.createElement("div");
 
@@ -588,10 +598,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  // Vérification avant envoi
+  // Envoi du formulaire + message personnalisé
 
   formulaire.addEventListener("submit", function(e) {
 
+
+    e.preventDefault();
+
+
+
+    // Vérification présence
 
     if (presence.value === "Oui") {
 
@@ -603,18 +619,79 @@ document.addEventListener("DOMContentLoaded", function() {
       if (nombreAdultes === 0 && nombreEnfants === 0) {
 
 
-        e.preventDefault();
-
-
         alert("Merci d'indiquer au moins une personne présente.");
 
+        return;
 
       }
 
     }
 
 
+
+    const donnees = new FormData(formulaire);
+
+
+
+    fetch(formulaire.action, {
+
+      method: "POST",
+
+      body: donnees
+
+    })
+
+    .then(() => {
+
+
+      formulaire.style.display = "none";
+
+
+      merci.style.display = "block";
+
+
+
+      if (presence.value === "Oui") {
+
+
+        merciTitre.innerHTML = "❤️ Merci beaucoup !";
+
+
+        merciTexte.innerHTML =
+        "Nous avons hâte de partager cette magnifique journée avec vous et de créer de beaux souvenirs ensemble.";
+
+
+      } 
+      
+      
+      else {
+
+
+        merciTitre.innerHTML = "❤️ Merci pour votre réponse";
+
+
+        merciTexte.innerHTML =
+        "Nous sommes désolés de ne pas vous compter parmi nous ce jour-là.<br><br>" +
+        "Nous comprenons parfaitement et vous remercions sincèrement d’avoir pris le temps de nous répondre.<br><br>" +
+        "Nous penserons bien à vous le 18 septembre 2027 et espérons avoir le plaisir de vous retrouver très bientôt.";
+
+
+      }
+
+
+    })
+
+    .catch(() => {
+
+
+      alert("Une erreur est survenue. Merci de réessayer.");
+
+    });
+
+
+
   });
+
 
 
 });
