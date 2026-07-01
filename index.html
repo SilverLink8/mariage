@@ -477,6 +477,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const enfantsContainer = document.getElementById("enfantsContainer");
 
   const bouton = document.querySelector("#rsvpForm button");
+  const formulaire = document.getElementById("rsvpForm");
 
 
   // Affichage selon présence
@@ -584,6 +585,36 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
   }
+
+
+
+  // Vérification avant envoi
+
+  formulaire.addEventListener("submit", function(e) {
+
+
+    if (presence.value === "Oui") {
+
+
+      const nombreAdultes = Number(adultes.value);
+      const nombreEnfants = Number(enfants.value);
+
+
+      if (nombreAdultes === 0 && nombreEnfants === 0) {
+
+
+        e.preventDefault();
+
+
+        alert("Merci d'indiquer au moins une personne présente.");
+
+
+      }
+
+    }
+
+
+  });
 
 
 });
