@@ -463,7 +463,128 @@ header h1 {
 
 
 </section>
-  
+  <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const presence = document.getElementById("presence");
+  const presenceOui = document.getElementById("presenceOui");
+
+  const adultes = document.getElementById("adultes");
+  const enfants = document.getElementById("enfants");
+
+  const adultesContainer = document.getElementById("adultesContainer");
+  const enfantsContainer = document.getElementById("enfantsContainer");
+
+  const bouton = document.querySelector("#rsvpForm button");
+
+
+  // Affichage selon présence
+
+  presence.addEventListener("change", function() {
+
+    console.log("Présence choisie :", this.value);
+
+    if (this.value === "Oui") {
+
+      presenceOui.style.display = "block";
+      bouton.textContent = "Confirmer notre présence 💍";
+
+    } 
+    
+    else if (this.value === "Non") {
+
+      presenceOui.style.display = "none";
+
+      adultesContainer.innerHTML = "";
+      enfantsContainer.innerHTML = "";
+
+      bouton.textContent = "Envoyer notre réponse";
+
+    } 
+    
+    else {
+
+      presenceOui.style.display = "none";
+
+    }
+
+  });
+
+
+  // Création des adultes
+
+  adultes.addEventListener("input", function() {
+
+    creerPersonnes(
+      adultesContainer,
+      Number(this.value),
+      "Adulte"
+    );
+
+  });
+
+
+  // Création des enfants
+
+  enfants.addEventListener("input", function() {
+
+    creerPersonnes(
+      enfantsContainer,
+      Number(this.value),
+      "Enfant"
+    );
+
+  });
+
+
+
+  function creerPersonnes(container, nombre, type) {
+
+    container.innerHTML = "";
+
+    for (let i = 1; i <= nombre; i++) {
+
+      let bloc = document.createElement("div");
+
+      bloc.className = "rsvp-personne";
+
+
+      bloc.innerHTML = `
+
+        <h4>${type} ${i}</h4>
+
+        <label>
+          Nom et prénom
+        </label>
+
+        <input
+          type="text"
+          name="${type}_${i}_Nom"
+        >
+
+        <label>
+          Allergie ou régime alimentaire
+        </label>
+
+        <input
+          type="text"
+          name="${type}_${i}_Allergie"
+        >
+
+      `;
+
+
+      container.appendChild(bloc);
+
+    }
+
+  }
+
+
+});
+
+</script>
 </body>
   <footer>
   <p>Avec amour, Violaine & Fabien</p>
