@@ -310,17 +310,20 @@ header h1 {
   text-decoration:none;
   border-radius:50px;
   letter-spacing:2px;
+  transition:all 0.3s ease;
 
 }
+
 
 
 .bouton:hover {
 
   background:#024568;
   color:white;
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
 
 }
-
 
 
 /* ------------------------------------------------------------------ ANIMATION ------------------------------------------------------------------ */
@@ -505,6 +508,25 @@ footer {
   padding:30px;
   text-align:center;
   font-size:0.9em;
+
+}
+  /* ------------------------------------------------------------------ APPARITION AU SCROLL ------------------------------------------------------------------ */
+
+.section-cream,
+.section-bleufonce,
+.section-img-1 {
+
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity 1s ease, transform 1s ease;
+
+}
+
+
+.section-visible {
+
+  opacity:1;
+  transform:translateY(0);
 
 }
 /* ------------------------------------------------------------------ VERSION MOBILE ------------------------------------------------------------------ */
@@ -1215,7 +1237,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+const sections = document.querySelectorAll(
+  ".section-cream, .section-bleufonce, .section-img-1"
+);
 
+
+const observer = new IntersectionObserver(
+(entries) => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("section-visible");
+
+    }
+
+  });
+
+},
+{
+  threshold:0.15
+});
+
+
+sections.forEach(section => {
+
+  observer.observe(section);
+
+});
 </script>
 
   <footer>
