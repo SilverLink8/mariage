@@ -795,12 +795,11 @@ footer {
   <!----------------------------------------------------------------- FORMULAIRE ------------------------------------------->
 <section id="rsvp" class="section-cream">
 
-  <h2>RSVP</h2>
+<h2 id="rsvpTitre">RSVP</h2>
 
-  <h5>
-    Merci de confirmer votre présence avant le 1er juin 2027.
-  </h5>
-
+<h5 id="rsvpSousTitre">
+  Merci de confirmer votre présence avant le 1er juin 2027.
+</h5>
 
   <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbzHVTYYjNTrJsDn0JivFUCS9md9ikR4Zum3Ep8AyyWRS8kyiZOxIv8cUXzfNOZZRV0/exec" method="POST">
 
@@ -955,6 +954,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const merciTitre = document.getElementById("merciTitre");
   const merciTexte = document.getElementById("merciTexte");
 
+  const rsvpTitre = document.getElementById("rsvpTitre");
+const rsvpSousTitre = document.getElementById("rsvpSousTitre");
 
 
 
@@ -1166,10 +1167,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-      formulaire.style.display = "none";
+  formulaire.style.display = "none";
 
+rsvpTitre.style.display = "none";
+rsvpSousTitre.style.display = "none";
 
-      merci.style.display = "block";
+merci.style.display = "block";
 
 
 
