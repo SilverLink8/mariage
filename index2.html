@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mariage Violaine & Fabien</title>
+  <style>
+    /* ------------------------------------------------------------------ h1 ------------------------------------------------------------------ */ 
+    h1 {
+     font-family: 'AstonScript','Great Vibes', cursive;
+       color: white;
+      font-size: 6em;
+      text-align: center;
+      margin: 0;
+       opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+    }
+    /* ------------------------------------------------------------------ H2 et H3 ------------------------------------------------------------------ */ 
+        h2 {
+     font-family: 'Playfair Display', serif;
+          font-weight: normal;
+            letter-spacing: 10px;
+      font-size: 4em;
+      text-align: center;
+            margin-top: 10px;
+  margin-bottom: 15px;
+    }
+      h3 {
+      font-family: 'Gastela', serif;
+          font-weight: normal;
+      font-size: 4em;
+        color: #35a8b8;
+      text-align: center;
+         margin-top: 20px;
+  margin-bottom: 10px;
+    }
+    /* ------------------------------------------------------------------ body ------------------------------------------------------------------ */ 
+    body {
+      background: #dbd2c1;
+      font-size: 1.2em; /* légèrement plus grand */
+      margin: 0;
+      padding: 0;
+       font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: #4b4438;
+  line-height: 1.8;
+       letter-spacing: 1px;
+    }
+/* ------------------------------------------------------------------ HEADER ------------------------------------------------------------------ */    
+ header {
+  height: 70vh;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("fond_alsace.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoom 10s ease forwards;
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+    
+    section {
+       
+  
+}
+    /* ------------------------------------------------------------------ SECTIONS ------------------------------------------------------------------ */ 
+    .section-cream {
+  background: #dbd2c1;
+  padding: 40px 40px;
+}
+       .section-bleufonce {
+  background: #01262b;
+         color : white;
+  padding: 20px 40px 40px;
+}
+        .section-img-1 {
+   background-image: url("./paon_fond.png");
+          color : white;
+  padding: 40px 40px;
+}
+     .adress {
+  font-family: 'Helvetica', sans serif;
+        font-size: 1.3em;
+        letter-spacing: 2px;
+}
+    .box {
+      background: white;
+      width: 100%;
+  /* ------------------------------------------------------------------ IMG ROSENMEER ------------------------------------------------------------------ */    
+    }
+.photo-flottante {
+  width: 300px;
+  animation: flotter 4s ease-in-out infinite;
+}
+  .fete-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fete-texte {
+  flex: 1;
+  max-width: 450px;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.fete-image {
+  flex: 1;
+  text-align: center;
+}
+    @media (max-width: 700px) {
+  .fete-contenu {
+    flex-direction: column;
+  }
+}
+
+.fete-image {
+  flex: 1;
+}
+
+.fete-image img {
+  width: 100%;
+  max-width: 400px;
+}
+/* ------------------------------------------------------------------ hebergement ------------------------------------------------------------------ */ 
+    .hebergement {
+  max-width: 700px;
+  margin: 0 auto;
+}
+/* ------------------------------------------------------------------ FONTS ------------------------------------------------------------------ */ 
+    .bouton {
+  display: inline-block;
+  padding: 10px 25px;
+   border: none;
+  color: #01262b;
+  background: white;
+  text-decoration: none;
+  border-radius: 50px;
+  letter-spacing: 2px;
+}
+
+.bouton:hover {
+  background: #01262b;
+  color: white;
+}
+/* ------------------------------------------------------------------ anim ------------------------------------------------------------------ */ 
+@keyframes flotter {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+  /* ------------------------------------------------------------------ FONTS ------------------------------------------------------------------ */   
+    @font-face {
+  font-family: 'AstonScript';
+  src: url('./fonts/aston-script.ttf') format('truetype');
+      font-weight: normal;
+  font-style: normal;
+}
+    @font-face {
+  font-family: 'Gastela';
+  src: url('./fonts/Gastela.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ------------------------------------------------------------------   NOUVEAU RSVP V2------------------------------------------------------------------ */
+
+.cache {
+  display: none;
+}
+
+.rsvp-personne {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  animation: apparition 0.5s ease forwards;
+}
+
+.rsvp-personne h4 {
+  font-family: 'Playfair Display', serif;
+  color: #01262b;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#adultesContainer,
+#enfantsContainer {
+  margin-bottom: 20px;
+}
+
+#merci {
+  margin-top: 40px;
+}
+
+ /* ------------------------------------------------------------------ footer ------------------------------------------------------------------ */
+    footer {
+  background: #01262b;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.9em;
+}
+  </style>
+
+</head>
+
+<body>
+<!----------------------------------------------------------------- HEADER ------------------------------------------->
+<header>
+  <h1>Violaine & Fabien</h1>
+</header>
+<!----------------------------------------------------------------- INTRO ------------------------------------------->
+<section class="section-cream">
+  <h2>Bienvenue</h2>
+  <p>Nous avons la joie de vous inviter à célébrer notre mariage.</p>
+  <p>Nous serons heureux de vous retrouver en Alsace, au cœur du mois de septembre, pour partager ce moment unique.</p>
+</section>
+<!----------------------------------------------------------------- DATE LIEUX ------------------------------------------->
+<section class="section-bleufonce">
+  <h2>Le grand jour</h2>
+  <h3>Cérémonie religieuse</h3>
+<p>Nous vous donnons rendez-vous pour célébrer notre union à :</p>
+  <p class="adress">Église protestante de Mundolsheim </p>
+<p class="adress">Grand’rue de l’Église, 67450 Mundolsheim</p>
+</p>
+ 
+<div class="fete-contenu">
+
+  <div class="fete-texte">
+    <h3>Cap sur la fête</h3>
+
+    <p>
+      Après la cérémonie, retrouvons-nous pour poursuivre cette belle journée autour d'un vin d’honneur, d'un dîner et d'une soirée festive.
+    </p>
+
+    <p class="adress">Le Rosenmeer</p>
+    <p class="adress">45 avenue de la Gare, 67076 Rosheim</p>
+  </div>
+
+  <div class="fete-image">
+    <img src='./rosenmeer.png' class="photo-flottante">
+  </div></div>
+  </section>
+<!----------------------------------------------------------------- LOGER ------------------------------------------->
+<section class="section-cream">
+  
+  <div class="hebergement">
+    <h2>Dormir sur place</h2>
+
+    <p>Il vous est possible de réserver afin de dormir sur place (petit-déjeuner buffet inclus) :</p>
+
+    <p>moins de 7 réservations : 130 € la chambre pour 2 personnes ;</p>
+    <p>à partir de 7 réservations : 115 € la chambre pour 2 personnes ;</p>
+    <p>à partir de 15 réservations : 99 € la chambre pour 2 personnes.</p>
+    <p>Lit supplémentaire : 10 € par enfant (à partir de 7 ans).</p>
+
+    <a href="https://le-rosenmeer.fr/" target="_blank" class="bouton">
+      Voir le site du Rosenmeer
+    </a>
+
+  </div>
+
+</section>
+<!----------------------------------------------------------------- Section FAQ ------------------------------------------->
+<section class="section-img-1">
+  <h2>Foire aux questions</h2>
+  <div class="faq-item">
+    <h4>À quelle heure devons-nous arriver ?</h4>
+    <p>Nous vous conseillons d'arriver quelques minutes avant le début de la cérémonie afin que chacun puisse prendre place sereinement.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Y a-t-il un dress code ?</h4>
+    <p>Tenue élégante, inspirée par le thème du voyage.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Les enfants sont-ils invités ?</h4>
+    <p>Oui, cependant il n'y aura pas de babysitter sur place.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Y aura-t-il des options alimentaires particulières ?</h4>
+    <p>Oui, indiquez vos allergies ou régimes alimentaires dans le formulaire RSVP.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Puis-je venir accompagné(e) ?</h4>
+    <p>Merci de vous référer à l'invitation reçue. Le formulaire RSVP vous permettra de confirmer les personnes présentes.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Jusqu'à quand confirmer ma présence ?</h4>
+    <p>Merci de répondre avant le 1er juin 2027.</p>
+  </div>
+
+</section>
+  <!----------------------------------------------------------------- FORMULAIRE ------------------------------------------->
+<section id="rsvp" class="section-cream">
+
+  <h2>RSVP</h2>
+
+  <p>
+    Merci de confirmer votre présence avant le 1er juin 2027.
+  </p>
+
+  <form id="rsvpForm" action="TON_URL_GOOGLE_SCRIPT" method="POST">
+
+    <label for="respondant">
+      Nom et prénom de la personne qui répond au formulaire
+    </label>
+
+    <input
+      type="text"
+      id="respondant"
+      name="Respondant"
+      required
+    >
+
+    <label for="email">
+      Adresse e-mail
+    </label>
+
+    <input
+      type="email"
+      id="email"
+      name="Email"
+      required
+    >
+
+    <label for="presence">
+      Serez-vous présent ?
+    </label>
+
+    <select id="presence" name="Présence" required>
+      <option value="">Choisir...</option>
+      <option value="Oui">Oui</option>
+      <option value="Non">Non</option>
+    </select>
+
+
+    <div id="presenceOui" class="cache">
+
+      <label for="adultes">
+        Nombre d'adultes
+      </label>
+
+      <input
+        type="number"
+        id="adultes"
+        min="0"
+        value="1"
+      >
+
+      <div id="adultesContainer"></div>
+
+
+      <label for="enfants">
+        Nombre d'enfants
+      </label>
+
+      <input
+        type="number"
+        id="enfants"
+        min="0"
+        value="0"
+      >
+
+      <div id="enfantsContainer"></div>
+
+
+    </div>
+
+
+    <div id="commentaireBloc">
+
+      <label for="commentaire">
+        Un commentaire ou une précision ? (facultatif)
+      </label>
+
+      <textarea
+        id="commentaire"
+        name="Commentaire"
+        rows="4"
+      ></textarea>
+
+    </div>
+
+
+    <button type="submit" class="bouton">
+      Envoyer ma réponse
+    </button>
+
+  </form>
+
+
+  <div id="merci" class="cache">
+
+    <h3>Merci beaucoup</h3>
+
+    <p id="messageMerci"></p>
+
+  </div>
+
+
+</section>
+  
+</body>
+  <footer>
+  <p>Avec amour, Violaine & Fabien</p>
+     <p>Les informations transmises via le formulaire RSVP sont utilisées uniquement pour l'organisation du mariage.</p>
+  <p>© 2027 — Tous droits réservés - création du site Léa Fontan</p>
+</footer>
+</html>
