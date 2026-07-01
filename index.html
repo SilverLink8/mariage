@@ -3,61 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <title>Mariage Violaine & Fabien</title>
-  <style>
-    /* ------------------------------------------------------------------ h1 ------------------------------------------------------------------ */ 
-    h1 {
-     font-family: 'AstonScript','Great Vibes', cursive;
-       color: white;
-      font-size: 6em;
-      text-align: center;
-      margin: 0;
-       opacity: 0;
+
+<style>
+
+/* ------------------------------------------------------------------ h1 ------------------------------------------------------------------ */ 
+
+h1 {
+  font-family: 'AstonScript','Great Vibes', cursive;
+  color: white;
+  font-size: 6em;
+  text-align: center;
+  margin: 0;
+  opacity: 0;
   animation: fadeIn 2s ease forwards;
 }
 
+
 @keyframes fadeIn {
+
   from {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
-    }
-    /* ------------------------------------------------------------------ H2 et H3 ------------------------------------------------------------------ */ 
-        h2 {
-     font-family: 'Playfair Display', serif;
-          font-weight: normal;
-            letter-spacing: 10px;
-      font-size: 4em;
-      text-align: center;
-            margin-top: 10px;
+
+}
+
+
+
+/* ------------------------------------------------------------------ H2 et H3 ------------------------------------------------------------------ */ 
+
+
+h2 {
+
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  letter-spacing: 10px;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 10px;
   margin-bottom: 15px;
-    }
-      h3 {
-      font-family: 'Gastela', serif;
-          font-weight: normal;
-      font-size: 4em;
-        color: #35a8b8;
-      text-align: center;
-         margin-top: 20px;
+
+}
+
+
+h3 {
+
+  font-family: 'Gastela', serif;
+  font-weight: normal;
+  font-size: 4em;
+  color: #35a8b8;
+  text-align: center;
+  margin-top: 20px;
   margin-bottom: 10px;
-    }
-    /* ------------------------------------------------------------------ body ------------------------------------------------------------------ */ 
-    body {
-      background: #dbd2c1;
-      font-size: 1.2em; /* légèrement plus grand */
-      margin: 0;
-      padding: 0;
-       font-family: 'Playfair Display', serif;
-      text-align: center;
-      color: #4b4438;
+
+}
+
+
+
+/* ------------------------------------------------------------------ body ------------------------------------------------------------------ */ 
+
+
+body {
+
+  background: #dbd2c1;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: #4b4438;
   line-height: 1.8;
-       letter-spacing: 1px;
-    }
+  letter-spacing: 1px;
+
+}
+
+
+
 /* ------------------------------------------------------------------ HEADER ------------------------------------------------------------------ */    
- header {
+
+
+header {
+
   height: 70vh;
   min-height: 500px;
   position: relative;
@@ -66,9 +97,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+
 }
 
+
 header::before {
+
   content: "";
   position: absolute;
   inset: 0;
@@ -77,14 +111,21 @@ header::before {
   background-position: center;
   background-repeat: no-repeat;
   animation: zoom 10s ease forwards;
+
 }
+
 
 header h1 {
+
   position: relative;
   z-index: 1;
+
 }
 
+
+
 @keyframes zoom {
+
   from {
     transform: scale(1);
   }
@@ -92,174 +133,339 @@ header h1 {
   to {
     transform: scale(1.1);
   }
+
 }
-    
-    section {
-       
-  
-}
-    /* ------------------------------------------------------------------ SECTIONS ------------------------------------------------------------------ */ 
-    .section-cream {
+
+
+
+/* ------------------------------------------------------------------ SECTIONS ------------------------------------------------------------------ */ 
+
+
+.section-cream {
+
   background: #dbd2c1;
   padding: 40px 40px;
+
 }
-       .section-bleufonce {
+
+
+.section-bleufonce {
+
   background: #01262b;
-         color : white;
+  color: white;
   padding: 20px 40px 40px;
+
 }
-        .section-img-1 {
-   background-image: url("./paon_fond.png");
-          color : white;
+
+
+.section-img-1 {
+
+  background-image: url("./paon_fond.png");
+  color: white;
   padding: 40px 40px;
+
 }
-     .adress {
+
+
+
+.adress {
+
   font-family: 'Helvetica', sans serif;
-        font-size: 1.3em;
-        letter-spacing: 2px;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+
 }
-    .box {
-      background: white;
-      width: 100%;
-  /* ------------------------------------------------------------------ IMG ROSENMEER ------------------------------------------------------------------ */    
-    }
+
+
+
+/* ------------------------------------------------------------------ IMAGES ------------------------------------------------------------------ */
+
+
 .photo-flottante {
+
   width: 300px;
   animation: flotter 4s ease-in-out infinite;
+
 }
-  .fete-contenu {
+
+
+.fete-contenu {
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 80px;
   max-width: 1100px;
   margin: 0 auto;
+
 }
 
+
 .fete-texte {
+
   flex: 1;
   max-width: 450px;
   text-align: left;
   padding-left: 40px;
+
 }
 
+
 .fete-image {
+
   flex: 1;
   text-align: center;
-}
-    @media (max-width: 700px) {
-  .fete-contenu {
-    flex-direction: column;
-  }
+
 }
 
-.fete-image {
-  flex: 1;
+
+
+@media (max-width:700px) {
+
+  .fete-contenu {
+
+    flex-direction: column;
+
+  }
+
 }
+
+
 
 .fete-image img {
+
   width: 100%;
   max-width: 400px;
-}
-/* ------------------------------------------------------------------ hebergement ------------------------------------------------------------------ */ 
-    .hebergement {
-  max-width: 700px;
-  margin: 0 auto;
-}
-/* ------------------------------------------------------------------ FONTS ------------------------------------------------------------------ */ 
-    .bouton {
-  display: inline-block;
-  padding: 10px 25px;
-   border: none;
-  color: #01262b;
-  background: white;
-  text-decoration: none;
-  border-radius: 50px;
-  letter-spacing: 2px;
+
 }
 
-.bouton:hover {
-  background: #01262b;
-  color: white;
+
+
+/* ------------------------------------------------------------------ hebergement ------------------------------------------------------------------ */
+
+
+.hebergement {
+
+  max-width:700px;
+  margin:0 auto;
+
 }
-/* ------------------------------------------------------------------ anim ------------------------------------------------------------------ */ 
+
+
+
+/* ------------------------------------------------------------------ BOUTON ------------------------------------------------------------------ */
+
+
+.bouton {
+
+  display:inline-block;
+  padding:10px 25px;
+  border:none;
+  color:#01262b;
+  background:white;
+  text-decoration:none;
+  border-radius:50px;
+  letter-spacing:2px;
+
+}
+
+
+.bouton:hover {
+
+  background:#01262b;
+  color:white;
+
+}
+
+
+
+/* ------------------------------------------------------------------ ANIMATION ------------------------------------------------------------------ */
+
+
 @keyframes flotter {
+
   0% {
-    transform: translateY(0);
+    transform:translateY(0);
   }
 
   50% {
-    transform: translateY(-20px);
+    transform:translateY(-20px);
   }
 
   100% {
-    transform: translateY(0);
+    transform:translateY(0);
   }
+
 }
-  /* ------------------------------------------------------------------ FONTS ------------------------------------------------------------------ */   
-    @font-face {
-  font-family: 'AstonScript';
-  src: url('./fonts/aston-script.ttf') format('truetype');
-      font-weight: normal;
-  font-style: normal;
+
+
+
+/* ------------------------------------------------------------------ FONTS ------------------------------------------------------------------ */
+
+
+@font-face {
+
+  font-family:'AstonScript';
+  src:url('./fonts/aston-script.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+
 }
-    @font-face {
-  font-family: 'Gastela';
-  src: url('./fonts/Gastela.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
+
+
+@font-face {
+
+  font-family:'Gastela';
+  src:url('./fonts/Gastela.otf') format('opentype');
+  font-weight:normal;
+  font-style:normal;
+
 }
-/* ------------------------------------------------------------------   NOUVEAU RSVP V2------------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------------ RSVP ------------------------------------------------------------------ */
+
 
 .cache {
-  display: none;
+
+  display:none;
+
 }
+
+
+#rsvpForm {
+
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:600px;
+  margin:0 auto;
+
+}
+
+
+
+#rsvpForm label {
+
+  display:block;
+  text-align:left;
+  margin-top:10px;
+
+}
+
+
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+
+  width:100%;
+  box-sizing:border-box;
+  padding:12px;
+  font-size:1.1em;
+  border-radius:8px;
+  border:1px solid #ccc;
+
+}
+
+
 
 .rsvp-personne {
-  background: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 12px;
-  animation: apparition 0.5s ease forwards;
+
+  background:white;
+  padding:20px;
+  margin-top:20px;
+  border-radius:12px;
+  animation:apparition 0.5s ease forwards;
+
 }
+
+
 
 .rsvp-personne h4 {
-  font-family: 'Playfair Display', serif;
-  color: #01262b;
-  font-size: 1.4em;
-  margin-bottom: 15px;
+
+  font-family:'Playfair Display',serif;
+  color:#01262b;
+  font-size:1.4em;
+  margin-bottom:15px;
+
 }
 
+
+
 @keyframes apparition {
+
   from {
-    opacity: 0;
-    transform: translateY(-10px);
+
+    opacity:0;
+    transform:translateY(-10px);
+
   }
 
   to {
-    opacity: 1;
-    transform: translateY(0);
+
+    opacity:1;
+    transform:translateY(0);
+
   }
+
 }
+
+
 
 #adultesContainer,
 #enfantsContainer {
-  margin-bottom: 20px;
+
+  margin-bottom:20px;
+
 }
+
+
+
+/* ------------------------------------------------------------------ MESSAGE APRES ENVOI ------------------------------------------------------------------ */
+
 
 #merci {
-  margin-top: 40px;
+
+  margin-top:40px;
+
 }
 
- /* ------------------------------------------------------------------ footer ------------------------------------------------------------------ */
-    footer {
-  background: #01262b;
-  color: white;
-  padding: 30px;
-  text-align: center;
-  font-size: 0.9em;
+
+
+#merciTitre {
+
+  color:#01262b;
+
 }
-  </style>
+
+
+
+#merciTexte {
+
+  font-size:1.2em;
+  line-height:1.8;
+
+}
+
+
+
+/* ------------------------------------------------------------------ FOOTER ------------------------------------------------------------------ */
+
+
+footer {
+
+  background:#01262b;
+  color:white;
+  padding:30px;
+  text-align:center;
+  font-size:0.9em;
+
+}
+
+
+</style>
 
 </head>
 
@@ -363,7 +569,9 @@ header h1 {
     Merci de confirmer votre présence avant le 1er juin 2027.
   </p>
 
- <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbzHVTYYjNTrJsDn0JivFUCS9md9ikR4Zum3Ep8AyyWRS8kyiZOxIv8cUXzfNOZZRV0/exec" method="POST">
+
+  <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbzHVTYYjNTrJsDn0JivFUCS9md9ikR4Zum3Ep8AyyWRS8kyiZOxIv8cUXzfNOZZRV0/exec" method="POST">
+
 
     <label for="respondant">
       Nom et prénom de la personne qui répond au formulaire
@@ -376,6 +584,8 @@ header h1 {
       required
     >
 
+
+
     <label for="email">
       Adresse e-mail
     </label>
@@ -387,43 +597,68 @@ header h1 {
       required
     >
 
+
+
     <label for="presence">
       Serez-vous présent ?
     </label>
 
-    <select id="presence" name="Présence" required>
-      <option value="">Choisir...</option>
-      <option value="Oui">Oui</option>
-      <option value="Non">Non</option>
+    <select 
+      id="presence" 
+      name="Présence" 
+      required
+    >
+
+      <option value="">
+        Choisir...
+      </option>
+
+      <option value="Oui">
+        Oui
+      </option>
+
+      <option value="Non">
+        Non
+      </option>
+
     </select>
 
 
+
     <div id="presenceOui" class="cache">
+
 
       <label for="adultes">
         Nombre d'adultes
       </label>
 
+
       <input
         type="number"
         id="adultes"
+        name="NombreAdultes"
         min="0"
         value="0"
       >
 
+
       <div id="adultesContainer"></div>
+
 
 
       <label for="enfants">
         Nombre d'enfants
       </label>
 
+
       <input
         type="number"
         id="enfants"
+        name="NombreEnfants"
         min="0"
         value="0"
       >
+
 
       <div id="enfantsContainer"></div>
 
@@ -431,41 +666,46 @@ header h1 {
     </div>
 
 
-    <div id="commentaireBloc">
 
-      <label for="commentaire">
-        Un commentaire ou une précision ? (facultatif)
-      </label>
 
-      <textarea
-        id="commentaire"
-        name="Commentaire"
-        rows="4"
-      ></textarea>
+    <label for="commentaire">
+      Un commentaire ou une précision ? (facultatif)
+    </label>
 
-    </div>
+
+    <textarea
+      id="commentaire"
+      name="Commentaire"
+      rows="4"
+    ></textarea>
+
 
 
     <button type="submit" class="bouton">
+
       Envoyer ma réponse
+
     </button>
 
+
   </form>
-<div id="merci" style="display:none; margin-top:40px;">
-
-  <h3 id="merciTitre"></h3>
-
-  <p id="merciTexte"></p>
-
-</div>
 
 
+
+  <div id="merci" style="display:none; margin-top:40px;">
+
+    <h3 id="merciTitre"></h3>
+
+    <p id="merciTexte"></p>
+
+  </div>
 
 
 </section>
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
+
 
   const presence = document.getElementById("presence");
   const presenceOui = document.getElementById("presenceOui");
@@ -485,47 +725,59 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
   // Affichage selon présence
 
   presence.addEventListener("change", function() {
 
-    console.log("Présence choisie :", this.value);
-
 
     if (this.value === "Oui") {
 
+
       presenceOui.style.display = "block";
 
-      bouton.textContent = "Confirmer notre présence 💍";
+      bouton.textContent = "Confirmer notre présence";
 
-    } 
-    
-    
+    }
+
+
+
     else if (this.value === "Non") {
 
+
       presenceOui.style.display = "none";
+
 
       adultesContainer.innerHTML = "";
       enfantsContainer.innerHTML = "";
 
+
       bouton.textContent = "Envoyer notre réponse";
 
-    } 
-    
-    
+
+    }
+
+
+
     else {
+
 
       presenceOui.style.display = "none";
 
+
     }
+
 
   });
 
 
 
-  // Création des adultes
+
+
+  // Création automatique des adultes
 
   adultes.addEventListener("input", function() {
+
 
     creerPersonnes(
       adultesContainer,
@@ -533,13 +785,17 @@ document.addEventListener("DOMContentLoaded", function() {
       "Adulte"
     );
 
+
   });
 
 
 
-  // Création des enfants
+
+
+  // Création automatique des enfants
 
   enfants.addEventListener("input", function() {
+
 
     creerPersonnes(
       enfantsContainer,
@@ -547,13 +803,19 @@ document.addEventListener("DOMContentLoaded", function() {
       "Enfant"
     );
 
+
   });
+
+
+
 
 
 
   function creerPersonnes(container, nombre, type) {
 
+
     container.innerHTML = "";
+
 
 
     for (let i = 1; i <= nombre; i++) {
@@ -561,16 +823,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
       let bloc = document.createElement("div");
 
+
       bloc.className = "rsvp-personne";
+
 
 
       bloc.innerHTML = `
 
+
         <h4>${type} ${i}</h4>
+
 
         <label>
           Nom et prénom
         </label>
+
 
         <input
           type="text"
@@ -578,27 +845,38 @@ document.addEventListener("DOMContentLoaded", function() {
           required
         >
 
+
+
         <label>
           Allergie ou régime alimentaire
         </label>
+
 
         <input
           type="text"
           name="${type}_${i}_Allergie"
         >
 
+
       `;
+
 
 
       container.appendChild(bloc);
 
+
     }
+
 
   }
 
 
 
-  // Envoi du formulaire + message personnalisé
+
+
+
+  // Envoi + message personnalisé
+
 
   formulaire.addEventListener("submit", function(e) {
 
@@ -607,13 +885,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    // Vérification présence
 
     if (presence.value === "Oui") {
 
 
+
       const nombreAdultes = Number(adultes.value);
       const nombreEnfants = Number(enfants.value);
+
 
 
       if (nombreAdultes === 0 && nombreEnfants === 0) {
@@ -623,9 +902,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         return;
 
+
       }
 
+
     }
+
+
 
 
 
@@ -633,15 +916,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
     fetch(formulaire.action, {
 
-      method: "POST",
 
-      body: donnees
+      method:"POST",
+
+      body:donnees
+
 
     })
 
+
+
     .then(() => {
+
 
 
       formulaire.style.display = "none";
@@ -651,40 +941,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
       if (presence.value === "Oui") {
 
 
-        merciTitre.innerHTML = "❤️ Merci beaucoup !";
+
+        merciTitre.innerHTML = "Merci beaucoup !";
+
 
 
         merciTexte.innerHTML =
+
         "Nous avons hâte de partager cette magnifique journée avec vous et de créer de beaux souvenirs ensemble.";
 
 
-      } 
-      
-      
-      else {
-
-
-        merciTitre.innerHTML = "❤️ Merci pour votre réponse";
-
-
-        merciTexte.innerHTML =
-        "Nous sommes désolés de ne pas vous compter parmi nous ce jour-là.<br><br>" +
-        "Nous comprenons parfaitement et vous remercions sincèrement d’avoir pris le temps de nous répondre.<br><br>" +
-        "Nous penserons bien à vous le 18 septembre 2027 et espérons avoir le plaisir de vous retrouver très bientôt.";
 
 
       }
 
 
+
+      else {
+
+
+
+        merciTitre.innerHTML = "Merci pour votre réponse";
+
+
+
+        merciTexte.innerHTML =
+
+        "Nous sommes désolés de ne pas vous compter parmi nous ce jour-là.<br><br>" +
+
+        "Nous comprenons parfaitement et vous remercions sincèrement d’avoir pris le temps de nous répondre.<br><br>" +
+
+        "Nous penserons bien à vous le 18 septembre 2027 et espérons avoir le plaisir de vous retrouver très bientôt.";
+
+
+
+      }
+
+
+
+
+
     })
+
+
 
     .catch(() => {
 
 
       alert("Une erreur est survenue. Merci de réessayer.");
+
 
     });
 
