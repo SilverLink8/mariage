@@ -463,7 +463,7 @@ header h1 {
 
 
 </section>
-  <script>
+<script>
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -488,6 +488,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (this.value === "Oui") {
 
       presenceOui.style.display = "block";
+
       bouton.textContent = "Confirmer notre présence 💍";
 
     } 
@@ -512,6 +513,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
+
   // Création des adultes
 
   adultes.addEventListener("input", function() {
@@ -523,6 +525,7 @@ document.addEventListener("DOMContentLoaded", function() {
     );
 
   });
+
 
 
   // Création des enfants
@@ -561,6 +564,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <input
           type="text"
           name="${type}_${i}_Nom"
+          required
         >
 
         <label>
