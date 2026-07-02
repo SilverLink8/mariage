@@ -370,26 +370,28 @@ header h1 {
 }
 /* ------------------------------------------------------------------ accordeon FAQ ------------------------------------------------------------------ */
 
+/* FAQ */
+
 .faq-item {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    background: #fff;
-    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
 }
 
 .faq-item summary {
     list-style: none;
     cursor: pointer;
-    padding: 18px 20px;
-    font-weight: 600;
-    font-size: 1.1rem;
     position: relative;
-    transition: background 0.3s;
-}
 
-.faq-item summary:hover {
-    background: #f8f8f8;
+    padding: 22px 40px 22px 0;
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    transition: color .3s ease;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -397,21 +399,32 @@ header h1 {
 }
 
 .faq-item summary::after {
-    content: "+";
+    content: "";
     position: absolute;
-    right: 20px;
-    font-size: 1.5rem;
-    transition: transform 0.3s;
+    right: 5px;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform .3s ease;
 }
 
 .faq-item[open] summary::after {
-    content: "−";
+    transform: translateY(-30%) rotate(225deg);
 }
 
 .faq-item p {
-    padding: 0 20px 20px;
     margin: 0;
-    line-height: 1.6;
+    padding: 0 40px 22px 0;
+
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
 /* ------------------------------------------------------------------ RSVP ------------------------------------------------------------------ */
@@ -784,6 +797,7 @@ footer {
 </section>
 
 <!----------------------------------------------------------------- FAQ ------------------------------------------->
+<!----------------------------------------------------------------- FAQ ------------------------------------------->
 <section class="section-img-1">
 
     <h2>Foire aux questions</h2>
@@ -810,9 +824,7 @@ footer {
             Oui, des boissons seront proposées tout au long de la soirée.
             Nous vous invitons toutefois à profiter de la fête avec modération
             et à anticiper votre retour afin que chacun puisse rentrer en toute sécurité.
-
             <br><br>
-
             Pour profiter pleinement de la soirée, il est également possible de dormir
             sur place en réservant une chambre au Rosenmeer.
         </p>
