@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariage Violaine & Fabien</title>
+
+<style>
+
+/* ------------------------------------------------------------------ h1 ------------------------------------------------------------------ */ 
+
+h1 {
+  font-family: 'AstonScript','Great Vibes', cursive;
+  color: white;
+  font-size: 6em;
+  text-align: center;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+
+/* ------------------------------------------------------------------ H2 et H3 ------------------------------------------------------------------ */ 
+
+
+h2 {
+
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  letter-spacing: 10px;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+}
+
+
+h3 {
+
+  font-family: 'Gastela', serif;
+  font-weight: normal;
+  font-size: 4em;
+  color: #48c6d7;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+}
+
+h4 {
+
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  letter-spacing: 5px;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+}
+h5 {
+
+  font-family: 'Gastela', serif;
+  font-weight: normal;
+  font-size: 2.5em;
+  color: #035f8a;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+   line-height: 1;
+
+}
+h6 {
+
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  letter-spacing: 5px;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+}
+
+/* ------------------------------------------------------------------ body ------------------------------------------------------------------ */ 
+
+
+body {
+
+  background: #dbd2c1;
+  font-size: 1.3em;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: #4b4438;
+  line-height: 1.8;
+  letter-spacing: 1px;
+
+}
+
+
+
+/* ------------------------------------------------------------------ HEADER ------------------------------------------------------------------ */    
+
+
+header {
+
+  height: 70vh;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+header::before {
+
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("fond_alsace.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoom 10s ease forwards;
+
+}
+
+
+header h1 {
+
+  position: relative;
+  z-index: 1;
+
+}
+
+
+
+@keyframes zoom {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+
+}
+#chapo2 {
+
+  font-size:2.8em;
+  text-align: center;
+
+}
+
+.chapo {
+
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  font-size:1.1em;
+  text-align: center;
+
+}
+
+
+/* ------------------------------------------------------------------ SECTIONS ------------------------------------------------------------------ */ 
+
+
+.section-cream {
+
+  background: #dbd2c1;
+  padding: 40px 40px;
+
+}
+
+
+.section-bleufonce {
+
+  background: #043f47;
+  color: white;
+  padding: 20px 40px 40px;
+
+}
+
+
+.section-img-1 {
+
+  background-image: url("./paon_fond_clair.png");
+  color: white;
+  padding: 40px 40px;
+
+}
+
+
+
+.adress {
+
+  font-family: 'Helvetica', sans serif;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+
+}
+
+
+
+/* ------------------------------------------------------------------ IMAGES ------------------------------------------------------------------ */
+
+
+.photo-flottante {
+
+  width: 300px;
+  animation: flotter 4s ease-in-out infinite;
+
+}
+
+
+.fete-contenu {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+
+}
+
+
+.fete-texte {
+
+  flex: 1;
+  max-width: 450px;
+  text-align: left;
+  padding-left: 40px;
+
+}
+
+
+.fete-image {
+
+  flex: 1;
+  text-align: center;
+
+}
+
+
+
+@media (max-width:700px) {
+
+  .fete-contenu {
+
+    flex-direction: column;
+
+  }
+
+}
+
+
+
+.fete-image img {
+
+  width: 100%;
+  max-width: 400px;
+
+}
+
+
+
+/* ------------------------------------------------------------------ hebergement ------------------------------------------------------------------ */
+
+
+.hebergement {
+
+  max-width:750px;
+  margin:0 auto;
+
+}
+
+
+
+/* ------------------------------------------------------------------ BOUTON ------------------------------------------------------------------ */
+
+
+.bouton {
+
+  display:inline-block;
+  padding:10px 25px;
+  border:none;
+  color:#01262b;
+  background:white;
+  text-decoration:none;
+  border-radius:50px;
+  letter-spacing:2px;
+  transition:all 0.3s ease;
+
+}
+
+
+
+.bouton:hover {
+
+  background:#024568;
+  color:white;
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+}
+
+
+/* ------------------------------------------------------------------ ANIMATION ------------------------------------------------------------------ */
+
+
+@keyframes flotter {
+
+  0% {
+    transform:translateY(0);
+  }
+
+  50% {
+    transform:translateY(-20px);
+  }
+
+  100% {
+    transform:translateY(0);
+  }
+
+}
+
+
+
+/* ------------------------------------------------------------------ FONTS ------------------------------------------------------------------ */
+
+
+@font-face {
+
+  font-family:'AstonScript';
+  src:url('./fonts/aston-script.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+
+}
+
+
+@font-face {
+
+  font-family:'Gastela';
+  src:url('./fonts/Gastela.otf') format('opentype');
+  font-weight:normal;
+  font-style:normal;
+
+}
+/* ------------------------------------------------------------------ accordeon FAQ ------------------------------------------------------------------ */
+
+/* FAQ */
+
+.faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+
+    padding: 22px 40px 22px 0;
+
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    transition: color .3s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+
+    width: 10px;
+    height: 10px;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform .3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: translateY(-30%) rotate(225deg);
+}
+
+.faq-item p {
+    margin: 0;
+    padding: 0 40px 22px 0;
+
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------ RSVP ------------------------------------------------------------------ */
+
+
+.cache {
+
+  display:none;
+
+}
+
+
+#rsvpForm {
+
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:600px;
+  margin:0 auto;
+
+}
+
+
+
+#rsvpForm label {
+
+  display:block;
+  text-align:left;
+  margin-top:10px;
+
+}
+
+
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+
+  width:100%;
+  box-sizing:border-box;
+  padding:12px;
+  font-size:1.1em;
+  border-radius:8px;
+  border:1px solid #ccc;
+
+}
+
+
+
+.rsvp-personne {
+
+  background:white;
+  padding:20px;
+  margin-top:20px;
+  border-radius:12px;
+  animation:apparition 0.5s ease forwards;
+
+}
+
+
+
+.rsvp-personne h4 {
+
+  font-family:'Playfair Display',serif;
+  color:#01262b;
+  font-size:1.4em;
+  margin-bottom:15px;
+
+}
+
+
+
+@keyframes apparition {
+
+  from {
+
+    opacity:0;
+    transform:translateY(-10px);
+
+  }
+
+  to {
+
+    opacity:1;
+    transform:translateY(0);
+
+  }
+
+}
+
+
+
+#adultesContainer,
+#enfantsContainer {
+
+  margin-bottom:20px;
+
+}
+
+
+
+/* ------------------------------------------------------------------ MESSAGE APRES ENVOI ------------------------------------------------------------------ */
+
+
+#merci {
+
+  margin-top:40px;
+
+}
+
+
+
+#merciTitre {
+
+  color:#01262b;
+
+}
+
+
+
+#merciTexte {
+
+  font-size:1.2em;
+  line-height:1.8;
+
+}
+
+
+
+/* ------------------------------------------------------------------ FOOTER ------------------------------------------------------------------ */
+
+
+footer {
+
+  background:#043f47;
+  color:white;
+  padding:30px;
+  text-align:center;
+  font-size:0.9em;
+
+}
+  /* ------------------------------------------------------------------ APPARITION AU SCROLL ------------------------------------------------------------------ */
+
+.section-cream,
+.section-bleufonce,
+.section-img-1 {
+
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity 1s ease, transform 1s ease;
+
+}
+
+
+.section-visible {
+
+  opacity:1;
+  transform:translateY(0);
+
+}
+/* ------------------------------------------------------------------ VERSION MOBILE ------------------------------------------------------------------ */
+
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 1em;
+  }
+
+  header {
+    min-height: 350px;
+    height: 60vh;
+  }
+
+  h1 {
+    font-size: 3.2em;
+  }
+
+  h2 {
+    font-size: 2.2em;
+    letter-spacing: 4px;
+  }
+
+  h3 {
+    font-size: 2.3em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+
+  h5 {
+    font-size: 1.8em;
+  }
+
+  h6 {
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+
+  .chapo {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+
+  .section-cream,
+  .section-bleufonce,
+  .section-img-1 {
+    padding: 50px 20px;
+  }
+
+  .fete-contenu {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .fete-texte {
+    padding-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .photo-flottante {
+    width: 220px;
+  }
+
+  .adress {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+  }
+
+  .bouton {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #rsvpForm {
+    max-width: 100%;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<!----------------------------------------------------------------- HEADER ------------------------------------------->
+<header>
+  <h1>Violaine & Fabien</h1>
+</header>
+
+<!----------------------------------------------------------------- INTRO ------------------------------------------->
+<section class="section-cream">
+  <h2>Bienvenue</h2>
+
+  <h5 id="chapo2">
+    Nous avons la joie de vous inviter à célébrer notre mariage.
+  </h5>
+
+  <p class="chapo">
+    Nous serons heureux de vous retrouver en Alsace,<br>  au cœur du mois de septembre,<br>
+    pour partager ce moment unique.
+  </p>
+</section>
+
+<!----------------------------------------------------------------- DATE LIEUX ------------------------------------------->
+<section class="section-bleufonce">
+
+  <h2>Le grand jour</h2>
+
+  <h3>Cérémonie religieuse</h3>
+
+  <p>
+    Nous vous donnons rendez-vous pour célébrer notre union :
+  </p>
+
+  <h4>Samedi 18 septembre 2027 à 14h</h4>
+
+  <p class="adress">
+    Église protestante Saint-Laurent de Dorlisheim
+  </p>
+
+  <p class="adress">
+    13 Rue de l’église, 67120 Dorlisheim 
+  </p>
+
+  <div class="fete-contenu">
+
+    <div class="fete-texte">
+
+      <h3>Cap sur la fête</h3>
+
+      <p>
+        Après la cérémonie, retrouvons-nous pour poursuivre cette belle journée
+        autour d'un vin d’honneur, d'un dîner et d'une soirée festive.
+      </p>
+
+      <p class="adress">
+        Le Rosenmeer
+      </p>
+
+      <p class="adress">
+        45 avenue de la Gare, 67076 Rosheim
+      </p>
+
+    </div>
+
+    <div class="fete-image">
+     <img
+  src="./rosenmeer.png"
+  class="photo-flottante"
+  alt="Le Rosenmeer à Rosheim">
+    </div>
+
+  </div>
+
+</section>
+<!----------------------------------------------------------------- LOGER ------------------------------------------->
+<section class="section-cream">
+
+  <div class="hebergement">
+
+    <h2>Dormir sur place</h2>
+
+    <h5>
+      Il vous est possible de réserver une chambre sur place au Rosenmeer.
+    </h5>
+
+    <p>
+      Le petit-déjeuner buffet est inclus.<br>
+      Afin de vous faire bénéficier du meilleur tarif, le prix des chambres évoluera
+      selon le nombre de réservations :
+    </p>
+
+    <p>
+      Jusqu’à 6 chambres réservées :
+      <strong>130 € la chambre pour 2 personnes</strong>.
+    </p>
+
+    <p>
+      À partir de 7 chambres réservées :
+      <strong>115 € la chambre pour 2 personnes</strong>.
+    </p>
+
+    <p>
+      À partir de 15 chambres réservées :
+      <strong>99 € la chambre pour 2 personnes</strong>.
+    </p>
+
+    <p>
+      Un lit supplémentaire peut également être ajouté pour les enfants
+      à partir de 7 ans, au tarif de
+      <strong>10 € par enfant</strong>.
+    </p>
+
+    <a
+      href="https://le-rosenmeer.fr/"
+      target="_blank"
+      class="bouton"
+    >
+      Voir le site du Rosenmeer
+    </a>
+
+  </div>
+
+</section>
+
+<!----------------------------------------------------------------- FAQ ------------------------------------------->
+<!----------------------------------------------------------------- FAQ ------------------------------------------->
+<section class="section-img-1">
+
+    <h2>Foire aux questions</h2>
+
+    <details class="faq-item">
+        <summary>À quelle heure devons-nous arriver ?</summary>
+        <p>
+            Nous vous conseillons d'arriver quelques minutes avant le début
+            de la cérémonie afin que chacun puisse prendre place sereinement.
+        </p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Jusqu'à quand confirmer ma présence ?</summary>
+        <p>
+            Merci de répondre avant le 1er juin 2027 afin de nous permettre
+            d'organiser au mieux cette belle journée.
+        </p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Y aura-t-il de l'alcool pendant la réception ?</summary>
+        <p>
+            Oui, des boissons seront proposées tout au long de la soirée.
+            Nous vous invitons toutefois à profiter de la fête avec modération
+            et à anticiper votre retour afin que chacun puisse rentrer en toute sécurité.
+            <br><br>
+            Pour profiter pleinement de la soirée, il est également possible de dormir
+            sur place en réservant une chambre au Rosenmeer.
+        </p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Y aura-t-il des options alimentaires particulières ?</summary>
+        <p>
+            Oui, nous vous invitons à indiquer vos allergies, intolérances
+            ou régimes alimentaires particuliers dans le formulaire RSVP afin
+            que nous puissions en tenir compte.
+        </p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Y a-t-il un dress code ?</summary>
+        <p>
+            Aucune couleur ni tenue particulière n'est imposée.
+            Si vous souhaitez vous inspirer de l'ambiance du mariage,
+            le thème du voyage pourra être une source d'inspiration pour votre tenue.
+        </p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Y aura-t-il une babysitter sur place ?</summary>
+        <p>
+            Il n'y aura malheureusement pas de service de garde prévu sur place.
+            Les enfants présents resteront donc sous la responsabilité de leurs parents
+            pendant toute la durée de la journée.
+        </p>
+    </details>
+
+</section>
+  <!----------------------------------------------------------------- FORMULAIRE ------------------------------------------->
+<section id="rsvp" class="section-cream">
+
+<h2 id="rsvpTitre">RSVP</h2>
+
+<h5 id="rsvpSousTitre">
+  Merci de confirmer votre présence avant le 1er juin 2027.
+</h5>
+
+  <form id="rsvpForm" action="https://script.google.com/macros/s/AKfycbzHVTYYjNTrJsDn0JivFUCS9md9ikR4Zum3Ep8AyyWRS8kyiZOxIv8cUXzfNOZZRV0/exec" method="POST">
+
+
+    <label for="respondant">
+      Nom et prénom de la personne qui répond au formulaire
+    </label>
+
+    <input
+      type="text"
+      id="respondant"
+      name="Respondant"
+      required
+    >
+
+
+
+    <label for="email">
+      Adresse e-mail
+    </label>
+
+    <input
+      type="email"
+      id="email"
+      name="Email"
+      required
+    >
+
+
+
+    <label for="presence">
+      Serez-vous présent ?
+    </label>
+
+    <select 
+      id="presence" 
+      name="Présence" 
+      required
+    >
+
+      <option value="">
+        Choisir...
+      </option>
+
+      <option value="Oui">
+        Oui
+      </option>
+
+      <option value="Non">
+        Non
+      </option>
+
+    </select>
+
+
+
+    <div id="presenceOui" class="cache">
+
+
+      <label for="adultes">
+        Nombre d'adultes
+      </label>
+
+
+      <input
+        type="number"
+        id="adultes"
+        name="NombreAdultes"
+        min="0"
+        value="0"
+      >
+
+
+      <div id="adultesContainer"></div>
+
+
+
+      <label for="enfants">
+        Nombre d'enfants
+      </label>
+
+
+      <input
+        type="number"
+        id="enfants"
+        name="NombreEnfants"
+        min="0"
+        value="0"
+      >
+
+
+      <div id="enfantsContainer"></div>
+
+
+    </div>
+
+
+
+
+    <label for="commentaire">
+      Un commentaire ou une précision ? (facultatif)
+    </label>
+
+
+    <textarea
+      id="commentaire"
+      name="Commentaire"
+      rows="4"
+    ></textarea>
+
+
+
+    <button type="submit" class="bouton">
+
+      Envoyer ma réponse
+
+    </button>
+
+
+  </form>
+
+
+
+  <div id="merci" style="display:none; margin-top:40px;">
+
+    <h3 id="merciTitre"></h3>
+
+    <p id="merciTexte"></p>
+
+  </div>
+
+
+</section>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+
+  const presence = document.getElementById("presence");
+  const presenceOui = document.getElementById("presenceOui");
+
+  const adultes = document.getElementById("adultes");
+  const enfants = document.getElementById("enfants");
+
+  const adultesContainer = document.getElementById("adultesContainer");
+  const enfantsContainer = document.getElementById("enfantsContainer");
+
+  const bouton = document.querySelector("#rsvpForm button");
+  const formulaire = document.getElementById("rsvpForm");
+
+  const merci = document.getElementById("merci");
+  const merciTitre = document.getElementById("merciTitre");
+  const merciTexte = document.getElementById("merciTexte");
+
+  const rsvpTitre = document.getElementById("rsvpTitre");
+const rsvpSousTitre = document.getElementById("rsvpSousTitre");
+
+
+
+  // Affichage selon présence
+
+  presence.addEventListener("change", function() {
+
+
+    if (this.value === "Oui") {
+
+
+      presenceOui.style.display = "block";
+
+      bouton.textContent = "Confirmer notre présence";
+
+    }
+
+
+
+    else if (this.value === "Non") {
+
+
+      presenceOui.style.display = "none";
+
+
+      adultesContainer.innerHTML = "";
+      enfantsContainer.innerHTML = "";
+
+
+      bouton.textContent = "Envoyer notre réponse";
+
+
+    }
+
+
+
+    else {
+
+
+      presenceOui.style.display = "none";
+
+
+    }
+
+
+  });
+
+
+
+
+
+  // Création automatique des adultes
+
+  adultes.addEventListener("input", function() {
+
+
+    creerPersonnes(
+      adultesContainer,
+      Number(this.value),
+      "Adulte"
+    );
+
+
+  });
+
+
+
+
+
+  // Création automatique des enfants
+
+  enfants.addEventListener("input", function() {
+
+
+    creerPersonnes(
+      enfantsContainer,
+      Number(this.value),
+      "Enfant"
+    );
+
+
+  });
+
+
+
+
+
+
+  function creerPersonnes(container, nombre, type) {
+
+
+    container.innerHTML = "";
+
+
+
+    for (let i = 1; i <= nombre; i++) {
+
+
+      let bloc = document.createElement("div");
+
+
+      bloc.className = "rsvp-personne";
+
+
+
+      bloc.innerHTML = `
+
+
+        <h4>${type} ${i}</h4>
+
+
+        <label>
+          Nom et prénom
+        </label>
+
+
+        <input
+          type="text"
+          name="${type}_${i}_Nom"
+          required
+        >
+
+
+
+        <label>
+          Allergie ou régime alimentaire
+        </label>
+
+
+        <input
+          type="text"
+          name="${type}_${i}_Allergie"
+        >
+
+
+      `;
+
+
+
+      container.appendChild(bloc);
+
+
+    }
+
+
+  }
+
+
+
+
+
+
+  // Envoi + message personnalisé
+
+
+  formulaire.addEventListener("submit", function(e) {
+
+
+    e.preventDefault();
+
+
+
+
+    if (presence.value === "Oui") {
+
+
+
+      const nombreAdultes = Number(adultes.value);
+      const nombreEnfants = Number(enfants.value);
+
+
+
+      if (nombreAdultes === 0 && nombreEnfants === 0) {
+
+
+        alert("Merci d'indiquer au moins une personne présente.");
+
+        return;
+
+
+      }
+
+
+    }
+
+
+
+
+
+    const donnees = new FormData(formulaire);
+
+
+
+
+
+    fetch(formulaire.action, {
+
+
+      method:"POST",
+
+      body:donnees
+
+
+    })
+
+
+
+    .then(() => {
+
+
+
+  formulaire.style.display = "none";
+
+rsvpTitre.style.display = "none";
+rsvpSousTitre.style.display = "none";
+
+merci.style.display = "block";
+
+
+
+
+
+      if (presence.value === "Oui") {
+
+
+
+        merciTitre.innerHTML = "Merci beaucoup !";
+
+
+
+        merciTexte.innerHTML =
+
+        "Nous avons hâte de partager cette magnifique journée avec vous et de créer de beaux souvenirs ensemble.";
+
+
+
+
+      }
+
+
+
+      else {
+
+
+
+        merciTitre.innerHTML = "Merci pour votre réponse";
+
+
+
+        merciTexte.innerHTML =
+
+        "Nous sommes désolés de ne pas vous compter parmi nous ce jour-là.<br><br>" +
+
+        "Nous comprenons parfaitement et vous remercions sincèrement d’avoir pris le temps de nous répondre.<br><br>" +
+
+        "Nous penserons bien à vous le 18 septembre 2027 et espérons avoir le plaisir de vous retrouver très bientôt.";
+
+
+
+      }
+
+
+
+
+
+    })
+
+
+
+    .catch(() => {
+
+
+      alert("Une erreur est survenue. Merci de réessayer.");
+
+
+    });
+
+
+
+  });
+
+
+
+});
+const sections = document.querySelectorAll(
+  ".section-cream, .section-bleufonce, .section-img-1"
+);
+
+
+const observer = new IntersectionObserver(
+(entries) => {
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("section-visible");
+
+    }
+
+  });
+
+},
+{
+  threshold:0.15
+});
+
+
+sections.forEach(section => {
+
+  observer.observe(section);
+
+});
+</script>
+
+  <footer>
+  <p>Avec amour, Violaine & Fabien</p>
+     <p>Les informations transmises via le formulaire RSVP sont utilisées uniquement pour l'organisation du mariage.</p>
+  <p>© 2027 — Tous droits réservés - création du site Léa Fontan</p>
+</footer>
+  </body>
+</html>
