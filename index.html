@@ -150,17 +150,18 @@ header::before {
 /* Image au premier plan */
 .header-image {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 1;
+    bottom: -40px;      /* fait dépasser l'image */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;       /* ajuste selon ton image */
+    max-width: 80%;
+    z-index: 2;
 }
 
 /* Titre */
-header h1{
-  position:relative;
-  z-index:2;
+header h1 {
+    position: relative;
+    z-index: 3;
 }
 
 
