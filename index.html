@@ -124,7 +124,6 @@ body {
 
 
 header {
-
   height: 70vh;
   min-height: 500px;
   position: relative;
@@ -133,12 +132,10 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
-
+/* Fond */
 header::before {
-
   content: "";
   position: absolute;
   inset: 0;
@@ -147,17 +144,26 @@ header::before {
   background-position: center;
   background-repeat: no-repeat;
   animation: zoom 10s ease forwards;
-
+  z-index: 0;
 }
 
-
-header h1 {
-
-  position: relative;
-  z-index: 1;
-
+/* Image au premier plan */
+.header-image{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:550px;
+  max-width:80%;
+  z-index:1;
+  pointer-events:none;
 }
 
+/* Titre */
+header h1{
+  position:relative;
+  z-index:2;
+}
 
 
 @keyframes zoom {
@@ -683,6 +689,7 @@ footer {
 
 <!----------------------------------------------------------------- HEADER ------------------------------------------->
 <header>
+    <img src="couple.png" alt="Violaine et Fabien" class="header-image">
   <h1>Violaine & Fabien</h1>
 </header>
 
